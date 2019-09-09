@@ -1,0 +1,15 @@
+<mat-accordion multi="true">
+  <mat-expansion-panel *ngFor="let class of classes">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{class.title}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{class.subtitle}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <markdown [src]="class.markdownURL"></markdown>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>

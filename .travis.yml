@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - stable
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - ng build --prod --base-href / # Generates the dist folder with built angular app
+  - cp dist/ta/index.html dist/ta/404.html
+  - echo "ta.choy.in" > dist/ta/CNAME
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/ta
+  fqdn: ta.choy.in # custom domain for github pages
+  on:
+    branch: master
