@@ -1,13 +1,16 @@
 ## Intro
 - If you know SVN, you basically know most of what's covered in this tutorial. In this course we are going to use Github
 to host our git repos. You can see the general differences between SVN and git [here](https://help.github.com/en/articles/what-are-the-differences-between-subversion-and-git)
+- For this topic, material presented here is an extension of what is provided in class. Although I highly recommend you to practice this in your group project, you are not required to do so in this course.
 
 ## Prerequisites
 - [Installing git](https://lmgtfy.com/?q=install+git) on your computer.
 - Create an account on [Github](https://github.com), or login to your existing account.
 
-## On Commit Messages
-You should always aim for clear commit messages. [Relevant XKCD comic](https://xkcd.com/1296/). **Please ensure this is enforced in your group project.**
+## On Committing
+
+### Commit Messages
+You should always aim for clear commit messages. [Relevant XKCD comic](https://xkcd.com/1296/).
 
 Bad Example:
 ```
@@ -18,6 +21,13 @@ Better Example:
 ```
 $ git commit -m "Fix typo in Week 1 tutorial notes"
 ```
+
+### Don't commit everything
+Some files are not necessary in the repo. For example, compiled files like `*.pyc` or `*.class`. You can
+ignore specific files by putting it in a file in the root directory of the repo called `.gitignore`.
+You can find templates for the `.gitignore` files [here](https://github.com/github/gitignore).
+
+Passwords, private keys and secret files should generally not be commited either and should be put in `.gitignore` as well.
 
 ## On Branching
 ### Best Practices
@@ -45,6 +55,40 @@ To make your lives easier, you could always do
 $ git push --set-upstream origin your-super-long-branch-name
 ```
 once, and then you can use `git push` subsequently.
+
+## On messing up
+Common commands to fix up your git command mistakes, or just any other mistakes.
+
+### Remove file from commit
+If you accidentally did `git add .` and added some files you don't want, you can unstage it.
+```
+$ git rm --cached <file path>
+```
+
+### Already in repo
+If you have a file that is supposedly in `.gitignore` but is already in the remote repository, you can also use the same command.
+```
+$ git rm --cached <file path>
+```
+
+### Discard all local changes
+`git reset --hard` should do the trick. For more undo possibilities, read it up [here](https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/).
+
+### Accidentally pushing to the wrong branch
+Sometimes you accidentally push to the wrong branch. It happens. You can take steps to correct that. Assume you have pushed 3 commits to the wrong branch:
+
+1. Reset local branch to the state of 3 commits ago.
+```
+$ git reset HEAD~3
+```
+2. Force push to the branch. (Exercise with caution as this rewrites history.)
+```
+$ git push origin +branchname
+```
+Note the `+` before `branchname`. It signifies force pushing.
+
+## Additional notes on merging
+Many people like to keep `master` clean, and consolidate feature branch commits into 1. This process is called squashinng. You could read it up [here](https://gist.github.com/patik/b8a9dc5cd356f9f6f980).
 
 ## On Two Factor Authentication with Github
 I definitely recommend you to have 2FA enabled on Github. If you choose to do that, using `git` in commandline will be a bit different.
