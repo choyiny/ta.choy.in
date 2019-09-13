@@ -74,7 +74,6 @@ Goal: you want to merge a feature branch into `master`.
 ```
 On branch featurebranch
 Your branch is up to date with 'origin/featurebranch'.
-
 nothing to commit, working tree clean
 ```
 2. If you haven't committed and pushed yet, do
