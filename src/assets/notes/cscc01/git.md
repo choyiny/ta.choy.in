@@ -7,6 +7,16 @@ to host our git repos. You can see the general differences between SVN and git [
 - [Installing git](https://lmgtfy.com/?q=install+git) on your computer.
 - Create an account on [Github](https://github.com), or login to your existing account.
 
+## Basics
+### PUSH!
+`git push` is the only command that will update the remote repository (on Github). `git commit` will only store the commit locally. My rule of thumb after creating/modifying a file (eg. `a.txt`) is the follows
+```
+$ git add test.py
+$ git commit -m "fixed stack overflow in test code"
+$ git push
+```
+Notice that I push right after I commit.
+
 ## On Committing
 
 ### Commit Messages
@@ -47,6 +57,7 @@ $ git merge master
 $ git checkout master
 $ git merge yourbranch
 ```
+5. If you merge, push!
 
 ### Shortcuts
 You don't always want to do `git push origin your-super-long-branch-name`.
@@ -55,6 +66,46 @@ To make your lives easier, you could always do
 $ git push --set-upstream origin your-super-long-branch-name
 ```
 once, and then you can use `git push` subsequently.
+
+## On Merging
+Goal: you want to merge a feature branch into `master`.
+
+1. Ensure you have pushed everything to your feature branch. `git status` should look like
+```
+On branch featurebranch
+Your branch is up to date with 'origin/featurebranch'.
+
+nothing to commit, working tree clean
+```
+2. If you haven't committed and pushed yet, do
+```
+$ git add .
+$ git commit -m "<commit message>"
+$ git push
+```
+3. Switch branches back to master
+```
+$ git checkout master
+```
+4. merge in the feature branch
+```
+$ git merge featurebranch
+```
+5. If you merge in command line and there is a conflict, you need to fix it manually.
+
+Original
+```
+<<<<<<< HEAD
+print('I love C01')
+=======
+print('C01 is fun')
+>>>>>>> my-branch
+```
+After
+```
+print('I love C01, C01 is cool.')
+```
+6. `git push origin master`
 
 ## On messing up
 Common commands to fix up your git command mistakes, or just any other mistakes.
