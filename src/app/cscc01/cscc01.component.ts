@@ -10,6 +10,8 @@ export class Cscc01Component implements OnInit {
 
   classes = [
     {title: 'Week 2', subtitle: 'Using Git and Github', markdownURL: '/assets/notes/cscc01/git.md'},
+    {title: 'Week 3', subtitle: 'User Stories', markdownURL: '/assets/notes/cscc01/agile.md'},
+    {title: 'Week 4', subtitle: 'REST', markdownURL: '/assets/notes/cscc01/rest.md'},
   ];
 
   constructor(private markdownService: MarkdownService) { }
