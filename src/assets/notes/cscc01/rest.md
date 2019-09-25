@@ -39,7 +39,6 @@ You can use this file to test your API. This implements the basic cases in the h
 Do check with more advance cases on your own though.
 ```python
 import requests
-
 res1 = requests.get('http://localhost:8080/api/addTwoNumbers', json={'firstNumber': 7, 'secondNumber': 3})
 assert 10 == res1.json()
 assert 200 == res1.status_code
