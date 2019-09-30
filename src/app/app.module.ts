@@ -11,18 +11,26 @@ import {
   MatSidenavModule,
   MatIconModule,
   MatListModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatBottomSheetModule,
+  MatFormFieldModule,
+  MatInputModule
 } from '@angular/material';
 import { IndexComponent } from './index/index.component';
 import { Cscc01Component } from './cscc01/cscc01.component';
 import {MarkdownModule} from 'ngx-markdown';
 import {HttpClientModule} from '@angular/common/http';
+import { AttendanceComponent } from './cscc01/attendance/attendance.component';
 
 @NgModule({
+  entryComponents: [
+    AttendanceComponent
+  ],
   declarations: [
     AppComponent,
     IndexComponent,
-    Cscc01Component
+    Cscc01Component,
+    AttendanceComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +44,10 @@ import {HttpClientModule} from '@angular/common/http';
     MatIconModule,
     MatListModule,
     MatExpansionModule,
+    MatButtonModule,
+    MatBottomSheetModule,
+    MatFormFieldModule,
+    MatInputModule,
     MarkdownModule.forRoot()
   ],
   providers: [],
