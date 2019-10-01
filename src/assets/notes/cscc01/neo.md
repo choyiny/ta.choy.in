@@ -13,8 +13,6 @@ services:
     ports:
       - 7687:7687
       - 7474:7474
-    environment:
-      - NEO4J_AUTH=none
     volumes:
       - "neo_volume:/data"
 volumes:
