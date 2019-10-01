@@ -1,7 +1,10 @@
-<button mat-raised-button color="primary" class="participation" (click)="openBottom()">Tutorial Participation</button>
+<div class="toolbar">
+  <button mat-raised-button color="primary" class="participation" (click)="openBottom()">Tutorial Participation</button>
+  <button mat-raised-button disabled>Questions and Feedback (Coming soon)</button>
+</div>
 <mat-accordion multi="true">
   <mat-expansion-panel *ngFor="let cls of classes">
-    <mat-expansion-panel-header>
+    <mat-expansion-panel-header *ngIf="cls.released">
       <mat-panel-title>
         {{cls.title}}
       </mat-panel-title>

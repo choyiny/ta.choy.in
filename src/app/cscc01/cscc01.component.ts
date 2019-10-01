@@ -10,12 +10,12 @@ import {AttendanceComponent} from './attendance/attendance.component';
 })
 export class Cscc01Component implements OnInit {
 
-  classes = [
-    {title: 'Week 2', subtitle: 'Using Git and Github', markdownURL: '/assets/notes/cscc01/git.md'},
-    {title: 'Week 3', subtitle: 'User Stories', markdownURL: '/assets/notes/cscc01/agile.md'},
-    {title: 'Week 4', subtitle: 'REST', markdownURL: '/assets/notes/cscc01/rest.md'},
-    {title: 'Week 5', subtitle: 'Practicing Scrum', markdownURL: '/assets/notes/cscc01/scrum.md'},
-    {title: 'Week 6', subtitle: 'neo4j', markdownURL: '/assets/notes/cscc01/neo.md'},
+  classes: Array<{title: string, subtitle: string, markdownURL: string, released: boolean}> = [
+    {title: 'Week 2', subtitle: 'Using Git and Github', markdownURL: '/assets/notes/cscc01/git.md', released: true},
+    {title: 'Week 3', subtitle: 'User Stories', markdownURL: '/assets/notes/cscc01/agile.md', released: true},
+    {title: 'Week 4', subtitle: 'REST', markdownURL: '/assets/notes/cscc01/rest.md', released: true},
+    {title: 'Week 5', subtitle: 'Practicing Scrum', markdownURL: '/assets/notes/cscc01/scrum.md', released: true},
+    {title: 'Week 6', subtitle: 'neo4j', markdownURL: '/assets/notes/cscc01/neo.md', released: false},
   ];
 
   constructor(

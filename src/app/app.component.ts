@@ -17,9 +17,15 @@ export class AppComponent {
 
   folders = [
     {
+      title: 'Home',
+      url: '/',
+      icon: 'home'
+    },
+    {
       title: 'CSCC01',
       subtitle: 'Fall 2019',
-      url: '/c01'
+      url: '/c01',
+      icon: 'folder'
     }
   ];
 
