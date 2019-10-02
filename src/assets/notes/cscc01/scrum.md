@@ -1,5 +1,6 @@
 ## Practice Scrum by building a Lego city
 [Ilir's Handout](/assets/notes/cscc01/tut01.pdf)
+[Github Classroom](https://classroom.github.com/g/RSifOOdd)
 
 _Note: Marks awarded based on participation and attendance._
 
