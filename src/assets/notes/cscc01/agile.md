@@ -43,7 +43,7 @@ my discipline
 - As Alice, an employer, I would like the application to be user-friendly
 - As Bob, a job seeker, I would like to get a notification when a job offer
 corresponding to my profile has been posted
-As Bob, a job seeker, I would like the application to work on iOS
+- As Bob, a job seeker, I would like the application to work on iOS
 
 
 ## Planning Poker
