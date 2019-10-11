@@ -1,0 +1,28 @@
+name: Github pages deployment
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    strategy:
+      matrix:
+        node-version: [stable]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: build and deploy to gh-pages
+      run: |
+        npm install
+        ng build --prod --base-href
+        cp dist/ta/index.html dist/ta/404.html
+        echo "ta.choy.in" > dist/ta/CNAME
