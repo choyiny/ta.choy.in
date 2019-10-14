@@ -13,14 +13,13 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: dist/ta # The folder the action should deploy.
+        CNAME: ta.choy.in
         BUILD_SCRIPT: |
           npm install
           ng build --prod --base-href
           cp dist/ta/index.html dist/ta/404.html
-          echo "ta.choy.in" > dist/ta/CNAME
 
 on:
   push:
