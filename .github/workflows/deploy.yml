@@ -24,4 +24,3 @@ on:
   push:
     branches:
       - master
-      - feature/gh-actions
