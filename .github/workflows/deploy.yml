@@ -1,13 +1,7 @@
 name: Github pages deployment
 
-on:
-  push:
-    branches:
-    - master
-
 jobs:
   build:
-
     runs-on: ubuntu-18.04
 
     strategy:
@@ -20,9 +14,21 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: build and deploy to gh-pages
-      run: |
-        npm install
-        ng build --prod --base-href
-        cp dist/ta/index.html dist/ta/404.html
-        echo "ta.choy.in" > dist/ta/CNAME
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: dist/ta # The folder the action should deploy.
+        BUILD_SCRIPT: |
+          npm install
+          ng build --prod --base-href
+          cp dist/ta/index.html dist/ta/404.html
+          echo "ta.choy.in" > dist/ta/CNAME
+
+on:
+  push:
+    branches:
+      - master
+      - feature/gh-actions
