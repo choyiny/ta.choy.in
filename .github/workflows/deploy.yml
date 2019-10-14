@@ -16,7 +16,7 @@ jobs:
           FOLDER: dist/ta # The folder the action should deploy.
           CNAME: ta.choy.in
           BUILD_SCRIPT:
-            npm install && ng build --prod --base-href && cp dist/ta/index.html dist/ta/404.html
+            npm install && npm run build && cp dist/ta/index.html dist/ta/404.html
 
 on:
   push:
