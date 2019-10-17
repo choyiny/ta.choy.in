@@ -1,5 +1,10 @@
 name: Github pages deployment
 
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -19,8 +24,3 @@ jobs:
             npm install
             npm run build
             cp dist/ta/index.html dist/ta/404.html
-
-on:
-  push:
-    branches:
-      - master
