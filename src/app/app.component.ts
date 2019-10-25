@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {Observable} from 'rxjs';
-import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
-import {map} from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,9 @@ import {map} from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  isDarkTheme: boolean = false;
+  themeName = 'Dark';
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -31,4 +34,8 @@ export class AppComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  toggleTheme(): void {
+    this.isDarkTheme = this.isDarkTheme ? false : true;
+    this.themeName = this.isDarkTheme ? 'Light': 'Dark';
+  }
 }

@@ -19,3 +19,13 @@
   top: 0;
   z-index: 1;
 }
+
+.toolbar-content-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-toggle-button {
+  margin: 0 55px 0 0;
+}
