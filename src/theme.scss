@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+.dark-theme {
+  $custom-primary: mat-palette($mat-blue);
+  $custom-accent: mat-palette($mat-blue-grey);
+  $custom-theme: mat-dark-theme($custom-primary, $custom-accent);
+  height: 100%;
+
+  @include angular-material-theme($custom-theme);
+}

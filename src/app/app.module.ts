@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AngularMaterialModule } from './angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
@@ -48,7 +49,8 @@ import { AttendanceComponent } from './cscc01/attendance/attendance.component';
     MatBottomSheetModule,
     MatFormFieldModule,
     MatInputModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
