@@ -15,7 +15,8 @@ import {
   MatExpansionModule,
   MatBottomSheetModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatSlideToggleModule
 } from '@angular/material';
 import { IndexComponent } from './index/index.component';
 import { Cscc01Component } from './cscc01/cscc01.component';
@@ -50,7 +51,8 @@ import { AttendanceComponent } from './cscc01/attendance/attendance.component';
     MatFormFieldModule,
     MatInputModule,
     MarkdownModule.forRoot(),
-    AngularMaterialModule
+    AngularMaterialModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,6 +26,26 @@
   justify-content: space-between;
 }
 
-.theme-toggle-button {
+.theme-toggle {
   margin: 0 55px 0 0;
+
+  .theme-name {
+    font-size: 15px;
+  }
+}
+
+@media(max-width: 730px) {
+  .main-nav-title {
+    font-size: 16px;
+  }
+
+  .theme-name {
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 680px) {
+  .theme-name {
+    display: none;
+  }
 }
