@@ -10,8 +10,8 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent {
 
-  isDarkTheme: boolean = false;
-  themeName = 'Dark';
+  isDarkTheme = true;
+  themeName = 'Light';
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -36,6 +36,6 @@ export class AppComponent {
 
   toggleTheme(): void {
     this.isDarkTheme = this.isDarkTheme ? false : true;
-    this.themeName = this.isDarkTheme ? 'Light': 'Dark';
+    this.themeName = this.isDarkTheme ? 'Light' : 'Dark';
   }
 }
