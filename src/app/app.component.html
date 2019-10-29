@@ -29,10 +29,11 @@
           <mat-slide-toggle
             class="theme-toggle"
             color="primary"
-            [matTooltip]="themeName + ' Theme'"
-            (click)="toggleTheme()">
+            [checked]="isDarkTheme"
+            [matTooltip]="'Click to switch to the ' + oppositeThemeName + ' Theme'"
+            (change)="toggleTheme($event)">
             <span class="theme-name">
-              {{ themeName }} Theme
+              Dark Theme
             </span>
           </mat-slide-toggle>
         </div>

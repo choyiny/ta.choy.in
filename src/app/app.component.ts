@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class AppComponent {
 
   isDarkTheme = true;
-  themeName = 'Light';
+  oppositeThemeName = 'Light';
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -34,8 +34,8 @@ export class AppComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
-  toggleTheme(): void {
-    this.isDarkTheme = this.isDarkTheme ? false : true;
-    this.themeName = this.isDarkTheme ? 'Light' : 'Dark';
+  toggleTheme(event): void {
+    this.isDarkTheme = event.checked;
+    this.oppositeThemeName = this.isDarkTheme ? 'Light' : 'Dark';
   }
 }
