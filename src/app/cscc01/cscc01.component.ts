@@ -18,6 +18,7 @@ export class Cscc01Component implements OnInit {
     {title: 'Week 6', subtitle: 'Agile Planning', markdownURL: '/assets/notes/cscc01/planning.md', released: true},
     {title: 'Sprint 1', subtitle: 'Sprint 1 Notes', markdownURL: '/assets/notes/cscc01/demo1.md', released: true},
     {title: 'Week 8', subtitle: 'MongoDB and Gitflow', markdownURL: '/assets/notes/cscc01/mongogit.md', released: true},
+    {title: 'Week 9', subtitle: 'Jenkins as CI/CD', markdownURL: '/assets/notes/cscc01/jenkins.md', released: true},
     {title: 'Additional Notes', subtitle: 'Database Setup: neo4j', markdownURL: '/assets/notes/cscc01/neo.md', released: false},
   ];
 
