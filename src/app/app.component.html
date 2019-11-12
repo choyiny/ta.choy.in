@@ -25,13 +25,17 @@
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
         <div class="toolbar-content-container">
-          <span>Cho Yin's TA Supplementary Notes</span>
-          <button
-            mat-raised-button
-            class="theme-toggle-button"
-            (click)="toggleTheme()">
-            {{ themeName }} Theme
-          </button>
+          <span class="main-nav-title">Cho Yin's TA Supplementary Notes</span>
+          <mat-slide-toggle
+            class="theme-toggle"
+            color="primary"
+            [checked]="isDarkTheme"
+            [matTooltip]="'Click to switch to the ' + oppositeThemeName + ' Theme'"
+            (change)="toggleTheme($event)">
+            <span class="theme-name">
+              Dark Theme
+            </span>
+          </mat-slide-toggle>
         </div>
       </mat-toolbar>
       <div class="content">

@@ -8,4 +8,12 @@
   height: 100%;
 
   @include angular-material-theme($custom-theme);
+
+  a {
+    color: #2196f3;
+  }
+
+  pre {
+    background-color: #a3a3a3;
+  }
 }
