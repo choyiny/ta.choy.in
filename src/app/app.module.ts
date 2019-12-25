@@ -23,6 +23,8 @@ import { Cscc01Component } from './cscc01/cscc01.component';
 import {MarkdownModule} from 'ngx-markdown';
 import {HttpClientModule} from '@angular/common/http';
 import { AttendanceComponent } from './cscc01/attendance/attendance.component';
+import {Cscc09Component} from './cscc09/cscc09.component';
+import {Cscd01Component} from './cscd01/cscd01.component';
 
 @NgModule({
   entryComponents: [
@@ -32,6 +34,8 @@ import { AttendanceComponent } from './cscc01/attendance/attendance.component';
     AppComponent,
     IndexComponent,
     Cscc01Component,
+    Cscc09Component,
+    Cscd01Component,
     AttendanceComponent
   ],
   imports: [

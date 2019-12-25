@@ -1,4 +1,6 @@
 # Teaching Assistant Supplementary Notes
+- [CSCC09 - Programming on the Web (Winter 2020)](https://ta.choy.in/c09)
+- [CSCD01 - Engineering Large Software Systems (Winter 2020)](https://ta.choy.in/d03)
 - [CSCC01 - Introduction to Software Engineering (Fall 2019)](https://ta.choy.in/c01)
 
 ## Development server

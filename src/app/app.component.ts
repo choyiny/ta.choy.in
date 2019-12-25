@@ -25,6 +25,18 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'CSCC09',
+      subtitle: 'Winter 2020',
+      url: '/c09',
+      icon: 'folder'
+    },
+    {
+      title: 'CSCD01',
+      subtitle: 'Winter 2020',
+      url: '/d01',
+      icon: 'folder'
+    },
+    {
       title: 'CSCC01',
       subtitle: 'Fall 2019',
       url: '/c01',
