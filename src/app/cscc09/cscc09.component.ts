@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarkdownService } from 'ngx-markdown';
 
 @Component({
   selector: 'app-cscc09',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Cscc09Component implements OnInit {
 
-  constructor() { }
+  classes: Array<{title: string, subtitle: string, markdownURL: string, released: boolean}> = [
+    {title: 'Project', subtitle: 'Technologies', markdownURL: '/assets/notes/cscc09/project.md', released: true}
+  ];
+
+  constructor(private markdownService: MarkdownService) { }
 
   ngOnInit() {
   }
