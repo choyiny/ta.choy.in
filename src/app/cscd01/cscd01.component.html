@@ -1,3 +1,15 @@
-<p>
-  cscd01 works!
-</p>
+<mat-accordion multi="true">
+  <mat-expansion-panel *ngFor="let cls of classes">
+    <mat-expansion-panel-header *ngIf="cls.released">
+      <mat-panel-title>
+        {{cls.title}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{cls.subtitle}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <markdown [src]="cls.markdownURL"></markdown>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>
